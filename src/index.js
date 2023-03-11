@@ -2,9 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
-const fetch = require('node-fetch');
 const morgan = require('morgan');
 const PORT = process.env.PORT || 3030;
+const fetch = require('node-fetch');
 
 // defining the Express app
 const app = express();
@@ -43,7 +43,7 @@ async function func2(data1,res){
 // defining an endpoint to return all ads
 app.get('/', async (req, res) => {
     data1 = {
-        "template":"1eGqK9b3Pv6kZnaYpP",
+        "template":"agXkA3Dw3oBqDW2VBY",
         "modifications":[
           {
             "name":"awardee_name",
@@ -52,15 +52,15 @@ app.get('/', async (req, res) => {
         ]
       }
     
-  await fetch("https://api.bannerbear.com/v2/auth", {
+  /*await fetch("https://api.bannerbear.com/v2/auth", {
     method: "GET",
     headers:{
         "Content-Type": "application/json",
         "Authorization":"Bearer bb_pr_f0afe8f623f0d3ef5d7722077d7518",
     },}).then((response) => response.json()).then((data)=>res.send(data));
     
-});
-  /*
+});*/
+  
   await fetch("https://api.bannerbear.com/v2/images", {
     method: "POST",
     headers:{
@@ -68,7 +68,7 @@ app.get('/', async (req, res) => {
         "Authorization":"Bearer bb_pr_f0afe8f623f0d3ef5d7722077d7518",
     },body:JSON.stringify(data1),}).then((response) => response.json()).then((data)=>func2(data,res));
     
-});*/
+});
 
 // starting the server
 app.listen(PORT, () => {
