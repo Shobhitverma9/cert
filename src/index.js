@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
+import fetch from "node-fetch";
 const morgan = require('morgan');
 const PORT = process.env.PORT || 3030;
 
