@@ -36,14 +36,14 @@ async function func2(data1,res){
     await fetch(url, {
         method: "GET",
         headers:{
-          "Authorization":"Bearer bb_pr_f0afe8f623f0d3ef5d7722077d7518",
+          "Authorization":"Bearer bb_pr_043449a745e4963c2d1e01ea80254d",
         },}).then((response) => response.json()).then((data) => res.send(data)); // parses JSON response into native JavaScript objects
 }
 
 // defining an endpoint to return all ads
 app.get('/', async (req, res) => {
     data1 = {
-        "template":"agXkA3Dw3oBqDW2VBY",
+        "template":"3g8zka5Y2Xd9DEJXBY",
         "modifications":[
           {
             "name":"awardee_name",
@@ -56,7 +56,7 @@ app.get('/', async (req, res) => {
     method: "GET",
     headers:{
         "Content-Type": "application/json",
-        "Authorization":"Bearer bb_pr_f0afe8f623f0d3ef5d7722077d7518",
+        "Authorization":"Bearer bb_pr_043449a745e4963c2d1e01ea80254d",
     },}).then((response) => response.json()).then((data)=>res.send(data));
     
 });*/
@@ -65,7 +65,7 @@ app.get('/', async (req, res) => {
     method: "POST",
     headers:{
         "Content-Type": "application/json",
-        "Authorization":"Bearer bb_pr_f0afe8f623f0d3ef5d7722077d7518",
+        "Authorization":"Bearer bb_pr_043449a745e4963c2d1e01ea80254d",
     },body:JSON.stringify(data1),}).then((response) => response.json()).then((data)=>func2(data,res));
     
 });
